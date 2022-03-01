@@ -5,7 +5,7 @@
     "version": "1.0",
     "content_scripts": [
       {
-        "matches": ["<all_urls>"],
+        "matches": ["https://twitter.com/*","https://cnn.com/*", ""https://fox.com/*"],
         "js": ["script.js"],
         "css": ["styles.css"]
         
