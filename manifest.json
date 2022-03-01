@@ -1,0 +1,15 @@
+{
+    "manifest_version": 2,
+    "name": "BackDate",
+    "description": "See the original post date of any photo on the internet",
+    "version": "1.0",
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["script.js"],
+        "css": ["styles.css"]
+        
+      }
+    ]
+  }
+  
