@@ -1,4 +1,4 @@
-#backDate{
+.backDate{
     position: absolute; 
     width: 100px;
     height: 35px;
@@ -8,6 +8,7 @@
     background:lightgreen; 
     color:black;
     font-family:sans-serif;
+    z-index:10000;
 }
 #wrap {
     position:relative;

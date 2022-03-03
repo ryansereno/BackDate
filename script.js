@@ -34,7 +34,7 @@ function wrap(toWrap, wrapper) {
   toWrap.parentNode.appendChild(wrapper);
   toWrap.insertAdjacentHTML(
     "beforebegin",
-    '<div id="backDate">Test Date</div>'
+    '<div class="backDate">Test Date</div>'
   );
   return wrapper.appendChild(toWrap);
 }
