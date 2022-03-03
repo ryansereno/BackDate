@@ -2,9 +2,20 @@ console.log("test message");
 
 Array.from(document.querySelectorAll("img")).forEach(addDateDiv);
 
+// This isn't great for performance but I can't think of a better way,
+// that accounts for all the various corner cases like infinite scroll,
+// and this is so easy.
+setInterval(() => {
+  Array.from(document.querySelectorAll("img:not(.backdateSkip)")).forEach(
+    addDateDiv
+  );
+}, 2000);
+
 // ***
 function addDateDiv(img) {
   console.log("img", img);
+  // Skip this element in future calls to addDateDiv(){...}, as we are now handling it
+  img.classList.add("backdateSkip");
   if (isImgSrc(img.src)) {
     // Img src not waiting to be lazy loaded, so wrap immediately
     wrap(img);
@@ -40,5 +51,7 @@ function wrap(toWrap, wrapper) {
 }
 
 function isImgSrc(url) {
-  return url.match(/\.(jpeg|jpg|gif|png)$/) != null;
+  // We could use someone else's better code for this, to make it more thorough
+  // and accurate, but for now this should be good enough
+  return url.match(/\.(jpeg|jpg|gif|png)/) != null;
 }
