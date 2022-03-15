@@ -1,4 +1,3 @@
-console.log("test message");
 
 Array.from(document.querySelectorAll("img")).forEach(addDateDiv);
 
@@ -45,7 +44,7 @@ function wrap(toWrap, wrapper) {
   toWrap.parentNode.appendChild(wrapper);
   toWrap.insertAdjacentHTML(
     "beforebegin",
-    '<div class="backDate">Test Date</div>'
+    '<div class="backDate">Test</div>'
   );
   return wrapper.appendChild(toWrap);
 }

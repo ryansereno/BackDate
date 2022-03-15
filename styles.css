@@ -1,14 +1,16 @@
 .backDate{
     position: absolute; 
-    width: 100px;
-    height: 35px;
+    width: 50px;
+    height: 30px;
     right: 0; 
     top: 80%; 
     bottom: 0; 
-    background:lightgreen; 
+    background:#00E4AC; 
     color:black;
     font-family:sans-serif;
     z-index:10000;
+    border-radius:5px 0 0 5px;
+    
 }
 #wrap {
     position:relative;
